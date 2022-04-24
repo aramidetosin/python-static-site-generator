@@ -1,7 +1,7 @@
 import re
 
-from yaml import load, FullLoader
 from collections.abc import Mapping
+from yaml import load, FullLoader
 
 
 class Content(Mapping):
@@ -16,11 +16,11 @@ class Content(Mapping):
 
     def __init__(self, metadata, content):
         self.data = metadata
-        self.data['content'] = content
+        self.data["content"] = content
 
     @property
     def body(self):
-        return self.data['content']
+        return self.data["content"]
 
     @property
     def type(self):
